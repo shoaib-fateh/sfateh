@@ -1,0 +1,1012 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="styles/tailwindcss.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/custom.css" />
+
+    <link rel="icon" href="./favicon.png" type="image/x-icon" sizes="16x16" />
+  </head>
+
+  <body
+    onload="init()"
+    class="__className_e66fe9 bg-[#030014] overflow-y-scroll overflow-x-hidden"
+    style="overflow: auto"
+  >
+    <div class="w-full h-auto fixed inset-0 z-[20]">
+      <div
+        style="
+          position: relative;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          pointer-events: auto;
+        "
+      >
+        <div
+          style="
+            width: 100%;
+            height: 100%;
+            background-image: url(images/back.png);
+            background-size: cover;
+          "
+        >
+          <!-- <canvas data-engine="three.js r159" width="1594" height="742"
+                    style="display: block; width: 1594px; height: 742px;"></canvas> -->
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10"
+    >
+      <div
+        class="w-[100%] h-full flex flex-row items-center justify-between m-auto px-[10px] gap-6"
+      >
+        <a
+          href="#about-me"
+          class="h-auto w-auto flex flex-row items-center m-auto"
+          ><img
+            alt="logo"
+            loading="lazy"
+            width="60"
+            height="60"
+            decoding="async"
+            data-nimg="1"
+            class="cursor-pointer hover:animate-slowspin"
+            src="./images/logo.png"
+            style="color: transparent"
+          /><span class="font-bold ml-[10px] hidden md:block text-gray-300"
+            >Shoaib Fateh</span
+          ></a
+        >
+        <div
+          class="md:flex hidden w-[70%] h-auto border border-[#7042f861] bg-[#0300145e] md:px-[20px] md:py-[10px] md:rounded-full text-gray-200"
+        >
+          <div
+            class="flex md:flex-row md:items-center md:justify-between lg:justify-around w-full gap-5"
+          >
+            <a
+              href="#about-me"
+              class="cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-purple-500"
+              >About me</a
+            ><a
+              href="#skills"
+              class="cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-purple-500"
+              >Skills</a
+            ><a
+              href="#projects"
+              class="cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-purple-500"
+              >Projects</a
+            ><a
+              href="files/Resume.pdf"
+              download="Resume"
+              class="cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-purple-500"
+              >Get My Resume </a
+            ><a
+              href="#contact"
+              class="cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-purple-500"
+              >Contact</a
+            >
+          </div>
+        </div>
+        <div
+          class="hidden md:flex md:flex-row md:justify-between md:gap-5 md:text-gray-200 md:text-[24px]"
+        >
+          <a
+            href="https://www.linkedin.com/in/shoaib-fateh"
+            target="_blank"
+            class="hover:text-purple-500"
+            ><svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 448 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+              ></path></svg></a
+          ><a
+            href="https://www.github.com/shoaib-fateh"
+            target="_blank"
+            class="hover:text-purple-500"
+            ><svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 496 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+              ></path></svg
+          ></a>
+        </div>
+        <!-- <div class="md:hidden mt-[-25px]">
+                <button type="button" class="text-gray-200 focus:outline-none absolute text-right " onclick="mbar()">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                        class="open w-9 h-9 p-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                        </path>
+                    </svg>
+                </button>
+            </div> -->
+      </div>
+    </div>
+    <main class="w-full h-full">
+      <div class="flex flex-col gap-20">
+        <div class="relative flex flex-col h-full w-full">
+          <video
+            class="blackhole rotate-180 absolute top-[-340px] left-0 z-[-1] w-full h-full object-cover"
+            autoplay
+            loop
+          >
+            <source src="./videos/blackhole.webm" type="video/webm" />
+          </video>
+          <div
+            class="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
+          >
+            <div
+              class="h-full w-full flex flex-col gap-5 justify-center m-auto text-start"
+            >
+              <div
+                class="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
+                style="opacity: 1; transform: none"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  class="text-[#b49bff] mr-[10px] h-5 w-5"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <h1 class="Welcome-text text-[13px]">
+                  Fullstack Web Developer
+                </h1>
+              </div>
+              <div
+                class="flex flex-col gap-6 mt-6 md:text-6xl text-4xl font-bold text-white max-w-[600px] w-auto h-auto"
+                style="opacity: 1; transform: none"
+              >
+                <span
+                  >Providing<span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500"
+                  >
+                    the best </span
+                  >project experience</span
+                >
+              </div>
+              <p
+                class="md:text-lg text-gray-400 my-5 max-w-[600px]"
+                style="opacity: 1; transform: none"
+              >
+                Hi there, I'm
+                <b
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-xl"
+                  >Shoaib Fateh</b
+                >, a Full Stack Software Developer with experience in Website,
+                Mobile, and Software development. Please check out my projects
+                and skills.
+              </p>
+              <div
+                class="flex flex-row gap-5 text-gray-200 text-[22px]"
+                style="opacity: 1"
+              >
+                <a
+                  href="https://www.linkedin.com/in/shoaib-fateh"
+                  target="_blank"
+                  ><svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                    ></path></svg></a
+                ><a href="https://www.github.com/shoaib-fateh" target="_blank"
+                  ><svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 496 512"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                    ></path></svg
+                ></a>
+              </div>
+              <a
+                class="py-2 button-primary text-center text-white cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 rounded-lg max-w-[200px]"
+                href="#about-me"
+                style="opacity: 1; transform: none"
+                >Learn More!</a
+              >
+            </div>
+            <div
+              class="f3-right w-full h-full flex justify-center items-center"
+              style="opacity: 1; transform: none"
+            >
+              <img
+                alt="work icons"
+                loading="lazy"
+                width="650"
+                height="650"
+                decoding="async"
+                data-nimg="1"
+                src="./images/mainIconsdark.svg"
+                style="color: transparent"
+              />
+            </div>
+          </div>
+        </div>
+        <section
+          id="skills"
+          class="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-80 py-20"
+          style="transform: scale(0.9)"
+        >
+          <div class="w-full h-auto flex flex-col items-center justify-center">
+            <div
+              class="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+                class="text-[#b49bff] mr-[10px] h-5 w-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <h1 class="Welcome-text text-[15px]">
+                Think better to be better
+              </h1>
+            </div>
+            <div
+              class="text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]"
+            >
+              Making apps with modern technologies
+            </div>
+            <div
+              class="cursive text-[20px] text-gray-200 mb-10 mt-[10px] text-center"
+            >
+              Never miss a task, deadline or idea
+            </div>
+          </div>
+          <div
+            class="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center"
+          >
+            <div style="opacity: 1">
+              <img
+                alt="skill image"
+                loading="lazy"
+                width="80"
+                height="80"
+                decoding="async"
+                data-nimg="1"
+                src="./images/icons/html.png"
+                style="color: transparent"
+              />
+            </div>
+            <div style="opacity: 1">
+              <img
+                alt="skill image"
+                loading="lazy"
+                width="80"
+                height="80"
+                decoding="async"
+                data-nimg="1"
+                src="./images/icons/css.png"
+                style="color: transparent"
+              />
+            </div>
+            <div style="opacity: 1">
+              <img
+                alt="skill image"
+                loading="lazy"
+                width="65"
+                height="65"
+                decoding="async"
+                data-nimg="1"
+                src="./images/icons/js.png"
+                style="color: transparent"
+              />
+            </div>
+            <div style="opacity: 1">
+              <img
+                alt="skill image"
+                loading="lazy"
+                width="80"
+                height="80"
+                decoding="async"
+                data-nimg="1"
+                src="./images/icons/tailwind.png"
+                style="color: transparent"
+              />
+            </div>
+            <div style="opacity: 1">
+              <img
+                alt="skill image"
+                loading="lazy"
+                width="80"
+                height="80"
+                decoding="async"
+                data-nimg="1"
+                src="./images/icons/boostrap.png"
+                style="color: transparent"
+              />
+            </div>
+            <div style="opacity: 1">
+              <img
+                alt="skill image"
+                loading="lazy"
+                width="80"
+                height="80"
+                decoding="async"
+                data-nimg="1"
+                src="./images/icons/react.png"
+                style="color: transparent"
+              />
+            </div>
+            <div style="opacity: 1">
+              <img
+                alt="skill image"
+                loading="lazy"
+                width="80"
+                height="80"
+                decoding="async"
+                data-nimg="1"
+                src="./images/icons/redux.png"
+                style="color: transparent"
+              />
+            </div>
+          </div>
+          <div
+            class="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center"
+          >
+            <div style="opacity: 1">
+              <img
+                alt="skill image"
+                loading="lazy"
+                width="80"
+                height="80"
+                decoding="async"
+                data-nimg="1"
+                src="./images/icons/node-js.png"
+                style="color: transparent"
+              />
+            </div>
+            <div style="opacity: 1">
+              <img
+                alt="skill image"
+                loading="lazy"
+                width="80"
+                height="80"
+                decoding="async"
+                data-nimg="1"
+                src="./images/icons/github.png"
+                style="color: transparent"
+              />
+            </div>
+            <div style="opacity: 1">
+              <img
+                alt="skill image"
+                loading="lazy"
+                width="80"
+                height="80"
+                decoding="async"
+                data-nimg="1"
+                src="./images/icons/git.png"
+                style="color: transparent"
+              />
+            </div>
+            <div style="opacity: 1">
+              <img
+                alt="skill image"
+                loading="lazy"
+                width="70"
+                height="70"
+                decoding="async"
+                data-nimg="1"
+                src="./images/icons/postger.png"
+                style="color: transparent"
+              />
+            </div>
+          </div>
+
+          <div class="w-full h-full absolute">
+            <div
+              class="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover"
+            >
+              <video
+                class="w-full h-auto"
+                preload="false"
+                playsinline=""
+                loop=""
+                autoplay=""
+                src="/cards-video.webm"
+              ></video>
+            </div>
+          </div>
+        </section>
+        <div
+          class="flex flex-row relative items-center justify-center min-h-screen w-full h-full mt-[-15%]"
+        >
+          <div class="absolute w-auto h-auto top-0 z-[5]">
+            <div
+              class="md:text-[40px] text-4xl font-medium text-center text-gray-200"
+            >
+              Performance<span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500"
+              >
+                &amp; </span
+              >Security
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-center justify-center translate-y-[-50px] absolute z-[20] w-auto h-auto"
+          >
+            <div
+              class="flex flex-col items-center group cursor-pointer w-auto h-auto"
+            >
+              <img
+                alt="Lock top"
+                loading="lazy"
+                width="50"
+                height="50"
+                decoding="async"
+                data-nimg="1"
+                class="w-[50px] translate-y-5 transition-all duration-200 group-hover:translate-y-11"
+                src="./images/icons/LockTop.png"
+                style="color: transparent"
+              /><img
+                alt="Lock Main"
+                loading="lazy"
+                width="70"
+                height="70"
+                decoding="async"
+                data-nimg="1"
+                class="z-10"
+                src="./images/icons/LockMain.png"
+                style="color: transparent"
+              />
+            </div>
+            <div
+              class="Welcome-box px-[15px] py-[4px] z-[20] brder my-[20px] border-[#7042f88b] opacity-[0.9]"
+            >
+              <h1 class="Welcome-text text-[12px]">Encryption</h1>
+            </div>
+          </div>
+          <div class="absolute z-[20] bottom-[10px] px-[5px]">
+            <div
+              class="cursive text-[20px] font-medium text-center text-gray-300"
+            >
+              Secure your data with end-to-end encryption
+            </div>
+          </div>
+          <div class="w-full flex items-start justify-center absolute">
+            <video
+              loop=""
+              autoplay=""
+              playsinline=""
+              preload="false"
+              class="w-full h-auto"
+              src="/encryption.webm/"
+            ></video>
+          </div>
+        </div>
+        <div
+          class="w-full h-full relative overflow-hidden isolate my-0 z-[20]"
+          id="about-me"
+          style="opacity: 1"
+        >
+          <div
+            class="flex flex-col items-center justify-center px-9 lg:px-64 md:px-32 relative"
+            style="opacity: 1; transform: none"
+          >
+            <h1
+              class="text-[40px] text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20"
+            >
+              About Me
+            </h1>
+            <p class="text-lg text-gray-200 text-center">
+              As a digital product developer, I specialize in creating
+              exceptional websites, features, and products that meet the diverse
+              needs of businesses. With a strong portfolio that showcases my
+              skills and expertise, I excel at turning ideas into visually
+              appealing and functional realities. My experience spans various
+              industries and technologies, allowing me to develop full-fledged
+              websites, innovative features, and entire products. I focus on
+              delivering high-quality solutions that are tailored to meet unique
+              project requirements, including responsive designs and seamless
+              user experiences. If you're looking for a reliable and skilled
+              developer to bring your vision to life, I'm here to help you turn
+              your concepts into remarkable digital experiences. Please feel
+              free to explore my portfolio and get in touch to discuss your
+              project needs further.
+            </p>
+            <div class="flex gap-3 p-4 my-4 text-gray-200 text-[24px]">
+              <a
+                href="https://www.linkedin.com/in/shoaib-fateh"
+                target="_blank"
+                class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+                ><svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                  ></path></svg></a
+              ><a
+                href="https://www.github.com/shoaib-fateh"
+                target="_blank"
+                class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+                ><svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 496 512"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                  ></path></svg
+              ></a>
+            </div>
+            <button
+              class="h-[40px] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 w-[200px] button-primary text-center text-white cursor-pointer rounded-xl"
+            >
+              <a href="Resume.pdf" download="Resume">Get My Resume </a>
+            </button>
+          </div>
+        </div>
+        <div class="z-[20]">
+          <div class="p-20 mx-auto" id="projects">
+            <h1
+              class="text-[40px] text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20"
+            >
+              My Projects
+            </h1>
+            <div class="gap-20">
+              <div class="slick-initialized" dir="ltr">
+                <div class="slick-track">
+                  <div class="slick-slide slick-cloned">
+                    <div
+                      class="flex flex-col relative items-center overflow-hidden rounded-3xl shadow-lg border border-[#2A0E61] h-[500px] mx-[2%] py-[5px]"
+                    >
+                      <img
+                        alt="line civic institution"
+                        loading="lazy"
+                        class="h-[50%] object-contain w-[110%] bg-opacity-10"
+                        src="./images/projects/line.JPG"
+                        style="color: transparent"
+                      />
+                      <div class="pt-[-16px] h-[50%] px-3 md:h-[40%] my-[3%]">
+                        <h1
+                          class="text-2xl font-semibold text-white text-center"
+                        >
+                          Line Civic Institution
+                        </h1>
+                        <p
+                          class="mt-2 md:text-[15px] max-sm:text-[13px] text-gray-300"
+                        >
+                        The Line Civic Institution, a non-profit established by Mr. Salar in 2012, promotes civic engagement and community development. It empowers individuals to shape their communities through initiatives and programs. Dedicated to democratic values, social justice, and inclusivity, it fosters an environment where everyone contributes to positive change, building stronger communities.
+                        </p>
+                      </div>
+                      <a href="https://www.linkedin.com/in/shoaib-fateh/" target="_blank">
+                        <button
+                          type="button"
+                          class="bottom-3 h-[40px] w-[150px] button-primary text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 text-white cursor-pointer rounded-xl items-center"
+                        >
+                          Read more
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slick-slide slick-cloned">
+                    <div
+                      class="flex flex-col relative items-center overflow-hidden rounded-3xl shadow-lg border border-[#2A0E61] h-[500px] mx-[2%] py-[5px]"
+                    >
+                      <img
+                        alt="premium account generator"
+                        loading="lazy"
+                        class="h-[50%] object-contain w-[110%] bg-opacity-10"
+                        src="./images/projects/premium account generator main.png"
+                        style="color: transparent"
+                      />
+                      <div class="pt-[-16px] h-[50%] px-3 md:h-[40%] my-[3%]">
+                        <h1
+                          class="text-2xl font-semibold text-white text-center"
+                        >
+                          Premium account generator
+                        </h1>
+                        <p
+                          class="mt-2 md:text-[15px] max-sm:text-[13px] text-gray-300"
+                        >
+                          premium account generatorPremium Account Generator: Elevate user experience with a click-to-generate feature for 1-year or 1-month premium accounts. Blurred security for email and password. Developers enhance display, implement random email logic, and add a supplementary offer button.
+                        </p>
+                      </div>
+                      <a href="https://github.com/shoaib-fateh" target="_blank">
+                        <button
+                          type="button"
+                          class="bottom-3 h-[40px] w-[150px] button-primary text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 text-white cursor-pointer rounded-xl items-center"
+                        >
+                          Read more
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slick-slide slick-cloned">
+                    <div
+                      class="flex flex-col relative items-center overflow-hidden rounded-3xl shadow-lg border border-[#2A0E61] h-[500px] mx-[2%] py-[5px]"
+                    >
+                      <img
+                        alt="youth savior foundation"
+                        loading="lazy"
+                        class="h-[50%] object-contain w-[110%] bg-opacity-10"
+                        src="./images/projects/youthsf.PNG"
+                        style="color: transparent"
+                      />
+                      <div class="pt-[-16px] h-[50%] px-3 md:h-[40%] my-[3%]">
+                        <h1
+                          class="text-2xl font-semibold text-white text-center"
+                        >
+                          Youth Savior Foundation
+                        </h1>
+                        <p
+                          class="mt-2 md:text-[15px] max-sm:text-[13px] text-gray-300"
+                        >
+                        The Youth Savior Social Foundation fosters civic engagement, promotes social cohesion, and cultivates responsibility towards the common good. We empower youth through programs, initiatives, and events, facilitating conversations, providing educational resources, and encouraging collaboration. We believe in creating a positive, impactful change in our community through collective effort.
+                        </p>
+                      </div>
+                      <a href="https://www.linkedin.com/in/shoaib-fateh/" target="_blank">
+                        <button
+                          type="button"
+                          class="bottom-3 h-[40px] w-[150px] button-primary text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 text-white cursor-pointer rounded-xl items-center"
+                        >
+                          Read more
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="slick-track">
+                  <div class="slick-slide slick-cloned">
+                    <div
+                      class="flex flex-col relative items-center overflow-hidden rounded-3xl shadow-lg border border-[#2A0E61] h-[500px] mx-[2%] py-[5px]"
+                    >
+                      <img
+                        alt="calculate a weight of an object on a planet"
+                        loading="lazy"
+                        class="h-[50%] object-contain w-[110%] bg-opacity-10"
+                        src="./images/projects/calculate a weight of an object on a planet.png"
+                        style="color: transparent"
+                      />
+                      <div class="pt-[-16px] h-[50%] px-3 md:h-[40%] my-[3%]">
+                        <h1
+                          class="text-2xl font-semibold text-white text-center"
+                        >
+                          Calculate a weight of an object on a planet
+                        </h1>
+                        <p
+                          class="mt-2 md:text-[15px] max-sm:text-[13px] text-gray-300"
+                        >
+                        A JavaScript program to calculate the weight of an object on different planets.
+                        </p>
+                      </div>
+                      <a href="https://github.com/shoaib-fateh/premium-account-generator" target="_blank">
+                        <button
+                          type="button"
+                          class="bottom-3 h-[40px] w-[150px] button-primary text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 text-white cursor-pointer rounded-xl items-center"
+                        >
+                          Read more
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slick-slide slick-cloned">
+                    <div
+                      class="flex flex-col relative items-center overflow-hidden rounded-3xl shadow-lg border border-[#2A0E61] h-[500px] mx-[2%] py-[5px]"
+                    >
+                      <img
+                        alt="dice game"
+                        loading="lazy"
+                        class="h-[50%] object-contain w-[110%] bg-opacity-10"
+                        src="./images/projects/dice game.png"
+                        style="color: transparent"
+                      />
+                      <div class="pt-[-16px] h-[50%] px-3 md:h-[40%] my-[3%]">
+                        <h1
+                          class="text-2xl font-semibold text-white text-center"
+                        >
+                          Dice game
+                        </h1>
+                        <p
+                          class="mt-2 md:text-[15px] max-sm:text-[13px] text-gray-300"
+                        >
+                        This is a simple dice game where two players take turns rolling a dice. The goal of the game is to reach a score of 100 or more.
+                        </p>
+                      </div>
+                      <a href="https://github.com/shoaib-fateh/dice-game" target="_blank">
+                        <button
+                          type="button"
+                          class="bottom-3 h-[40px] w-[150px] button-primary text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 text-white cursor-pointer rounded-xl items-center"
+                        >
+                          Read more
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slick-slide slick-cloned">
+                    <div
+                      class="flex flex-col relative items-center overflow-hidden rounded-3xl shadow-lg border border-[#2A0E61] h-[500px] mx-[2%] py-[5px]"
+                    >
+                      <img
+                        alt="to do list"
+                        loading="lazy"
+                        class="h-[50%] object-contain w-[110%] bg-opacity-10"
+                        src="./images/projects/orange to do list.png"
+                        style="color: transparent"
+                      />
+                      <div class="pt-[-16px] h-[50%] px-3 md:h-[40%] my-[3%]">
+                        <h1
+                          class="text-2xl font-semibold text-white text-center"
+                        >
+                          To do list
+                        </h1>
+                        <p
+                          class="mt-2 md:text-[15px] max-sm:text-[13px] text-gray-300"
+                        >
+                        This is a simple to-do list web application built using Node.js and Express. It uses EJS as the templating engine and includes basic styling with static files in the "public" directory.
+                        </p>
+                      </div>
+                      <a href="https://github.com/shoaib-fateh/to-do-list-with-nodejs" target="_blank">
+                        <button
+                          type="button"
+                          class="bottom-3 h-[40px] w-[150px] button-primary text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 text-white cursor-pointer rounded-xl items-center"
+                        >
+                          Read more
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="text-center"
+                  style="padding: 0px; padding-top: 100px"
+                >
+                  <a
+                    href="https://github.com/shoaib-fateh"
+                    target="_blank"
+                    class="Welcome-box py-[8px] m-auto px-[7px] border border-[#7042f88b] opacity-[0.9]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                      class="text-[#b49bff] mr-[10px] h-5 w-5"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+
+                    <h1 class="Welcome-text text-[15px]">More On My GitHub</h1>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="h-[20%] px-[5%] z-[20] isolate flex flex-col mb-[-7%] md:py-[5%]"
+            style="z-index: 20"
+          >
+            <h1
+              class="text-[40px] text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-9"
+            >
+              Contact Me
+            </h1>
+            <div
+              class="flex flex-col md:flex-row gap-9 justify-evenly items-center"
+              id="contact"
+            >
+              <div class="md:w-[40%] w-[80%] flex flex-col">
+                <p class="text-gray-200 text-[24px]">
+                  "Have a thrilling project on your mind? Let's turn it into
+                  reality together!
+                </p>
+                <br />
+                <p class="text-gray-200 text-[22px]">
+                  I'm passionate about diving into fresh concepts and bringing
+                  them to life. If you're looking for someone enthusiastic to
+                  collaborate on your project, I'm all ears! Don't hesitate to
+                  reach out; I'd love to explore your ideas and discuss how we
+                  can make them flourish."
+                </p>
+              </div>
+              <div
+                class="py-[25px] px-[3%] h-[550px] w-[80%] md:w-[40%] rounded-2xl"
+              >
+                <form
+                  method="POST"
+                  action="mailto:shoaibfateh21@yahoo.com"
+                  class="contact-form"
+                >
+                  <ul class="flex flex-col gap-8">
+                    <li class="flex flex-col">
+                      <input
+                        class="w-full rounded-2xl h-[50px] p-2 invalid:border-pink-500 invalid:text-pink-600"
+                        placeholder="Name"
+                        maxlength="30"
+                        minlength="3"
+                        required=""
+                        type="text"
+                        name="from_name"
+                      />
+                    </li>
+                    <li class="flex flex-col">
+                      <input
+                        class="w-full rounded-2xl h-[50px] p-2 invalid:border-pink-500 invalid:text-pink-600"
+                        placeholder="Email"
+                        required=""
+                        type="email"
+                        name="from_email"
+                      />
+                    </li>
+                    <li class="flex flex-col">
+                      <textarea
+                        name="message"
+                        class="w-full rounded-2xl md:h-[200px] h-[150px] p-2 invalid:border-pink-500 invalid:text-pink-600"
+                        placeholder="Message"
+                        maxlength="500"
+                        minlength="10"
+                        required=""
+                      ></textarea>
+                    </li>
+                    <li class="text-right">
+                      <button
+                        class="p-3 w-[150px] border border-[#2A0E61] button-primary rounded-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+                      >
+                        <input
+                          class="text-gray-200 text-[18px]"
+                          type="submit"
+                          value="Send"
+                        />
+                      </button>
+                    </li>
+                  </ul>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full h-full text-gray-200 shadow-lg p-[15px] z-[30]">
+          <div
+            class="w-full flex flex-col items-center justify-center m-auto"
+            style="opacity: 1"
+          >
+            <div
+              class="w-full h-full flex flex-row items-center justify-around flex-wrap"
+            >
+              <div
+                class="min-w-[200px] h-auto flex flex-col items-center justify-start"
+              >
+                <div class="font-bold text-[16px]">Community</div>
+                <p
+                  class="flex flex-row items-center my-[15px] cursor-pointer hover:text-purple-500"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                    ></path></svg
+                  ><a
+                    href="https://www.linkedin.com/in/shoaib-fateh"
+                    target="_blank"
+                    ><span class="text-[15px] ml-[6px]">Linkedin</span></a
+                  >
+                </p>
+                <p
+                  class="flex flex-row items-center my-[15px] cursor-pointer hover:text-purple-500"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-width="0"
+                    viewBox="0 0 15 15"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M7.49933 0.25C3.49635 0.25 0.25 3.49593 0.25 7.50024C0.25 10.703 2.32715 13.4206 5.2081 14.3797C5.57084 14.446 5.70302 14.2222 5.70302 14.0299C5.70302 13.8576 5.69679 13.4019 5.69323 12.797C3.67661 13.235 3.25112 11.825 3.25112 11.825C2.92132 10.9874 2.44599 10.7644 2.44599 10.7644C1.78773 10.3149 2.49584 10.3238 2.49584 10.3238C3.22353 10.375 3.60629 11.0711 3.60629 11.0711C4.25298 12.1788 5.30335 11.8588 5.71638 11.6732C5.78225 11.205 5.96962 10.8854 6.17658 10.7043C4.56675 10.5209 2.87415 9.89918 2.87415 7.12104C2.87415 6.32925 3.15677 5.68257 3.62053 5.17563C3.54576 4.99226 3.29697 4.25521 3.69174 3.25691C3.69174 3.25691 4.30015 3.06196 5.68522 3.99973C6.26337 3.83906 6.8838 3.75895 7.50022 3.75583C8.1162 3.75895 8.73619 3.83906 9.31523 3.99973C10.6994 3.06196 11.3069 3.25691 11.3069 3.25691C11.7026 4.25521 11.4538 4.99226 11.3795 5.17563C11.8441 5.68257 12.1245 6.32925 12.1245 7.12104C12.1245 9.9063 10.4292 10.5192 8.81452 10.6985C9.07444 10.9224 9.30633 11.3648 9.30633 12.0413C9.30633 13.0102 9.29742 13.7922 9.29742 14.0299C9.29742 14.2239 9.42828 14.4496 9.79591 14.3788C12.6746 13.4179 14.75 10.7025 14.75 7.50024C14.75 3.49593 11.5036 0.25 7.49933 0.25Z"
+                      fill="currentColor"
+                    ></path></svg
+                  ><a
+                    href="https://www.github.com/shoaib-fateh"
+                    target="_blank"
+                  >
+                    <span class="text-[15px] ml-[6px]">Github</span></a
+                  >
+                </p>
+              </div>
+              <div
+                class="min-w-[200px] h-auto flex flex-col items-center justify-start"
+              >
+                <div class="font-bold text-[16px]">About</div>
+                <p
+                  class="flex flex-row items-center my-[15px] cursor-pointer hover:text-purple-500"
+                >
+                  <a href="files/Resume.pdf" target="_blank"
+                    ><span class="text-[15px] ml-[6px]"
+                      >Learning about me</span
+                    ></a
+                  >
+                </p>
+                <p
+                  class="flex flex-row items-center my-[15px] cursor-pointer hover:text-purple-500"
+                >
+                  <a href="https://shoaibfateh21@yahoo.com/" target="_blank"
+                    ><span class="text-[15px] ml-[6px]"
+                      >shoaibfateh21@yahoo.com</span
+                    >
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="mb-[20px] text-[15px] text-center">
+              © Created by Shoaib Fateh 2023 Inc. All rights reserved
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="scripts/custom.js" defer></script>
+  </body>
+</html>
