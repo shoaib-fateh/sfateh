@@ -1,0 +1,51 @@
+* {
+  font-family: sans-serif;
+}
+
+.slick-track {
+  display: flex;
+  margin-top: 30px;
+}
+
+.slick-initialized .slick-slide {
+  max-width: 450px;
+  margin: auto;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .slick-initialized .slick-slide {
+    max-width: unset;
+    margin: auto;
+  }
+  .rotate-180.absolute.left-0.w-full.h-full.object-cover {
+    top: -225px;
+  }
+
+  .f3-right {
+    opacity: 0.3 !important;
+    position: absolute;
+    top: 0;
+  }
+
+  .slick-track {
+    display: unset;
+  }
+  .slick-track .slick-slide {
+    margin: 20px 0;
+  }
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  outline: 4px solid rgb(219 39 119 / 50%) !important;
+  padding-left: 15px;
+  background: #ffffff0f;
+  color: #fff;
+  border: 1px solid rgb(219, 39, 120) !important;
+}
+
+.contact-form textarea {
+  padding-top: 15px;
+}
