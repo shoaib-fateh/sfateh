@@ -1,0 +1,51 @@
+@media (max-width: 768px) {
+    .slick-initialized .slick-slide {
+      max-width: unset;
+      margin: auto;
+    }
+    .hero-video {
+      top: -225px;
+    }
+  
+    .f3-right {
+      opacity: 0.3 !important;
+      position: absolute;
+      top: 0;
+    }
+  
+    .slick-track {
+      display: unset;
+    }
+    .slick-track .slick-slide {
+      margin: 20px 0;
+    }
+
+    .hero-text,.hero-dec {
+        text-align: center;
+    }
+    .Welcome-box, .hero-icons {
+        margin: auto;
+    }
+    .hero-readmore-btn {
+        margin: auto;
+        padding: .5rem 50px;
+
+    }
+
+    .tp-b {
+        padding-bottom: 8rem !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-video {
+        top: -295px;
+    }    
+
+    .mp-lr {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+
+}

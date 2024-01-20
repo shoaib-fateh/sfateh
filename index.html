@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="styles/tailwindcss.css" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/custom.css" />
+    <link rel="stylesheet" href="styles/responsive.css">
 
     <link rel="icon" href="./favicon.png" type="image/x-icon" sizes="16x16" />
   </head>
 
+
   <body
-    onload="init()"
     class="__className_e66fe9 bg-[#030014] overflow-y-scroll overflow-x-hidden"
     style="overflow: auto"
   >
@@ -35,8 +36,8 @@
             background-size: cover;
           "
         >
-          <!-- <canvas data-engine="three.js r159" width="1594" height="742"
-                    style="display: block; width: 1594px; height: 742px;"></canvas> -->
+          <canvas data-engine="three.js r159" width="1594" height="742"
+                    style="display: block; width: 1594px; height: 742px;"></canvas>
         </div>
       </div>
     </div>
@@ -146,14 +147,14 @@
       <div class="flex flex-col gap-20">
         <div class="relative flex flex-col h-full w-full">
           <video
-            class="blackhole rotate-180 absolute top-[-340px] left-0 z-[-1] w-full h-full object-cover"
+            class="hero-video blackhole rotate-180 absolute top-[-340px] left-0 z-[-1] w-full h-full object-cover"
             autoplay
             loop
           >
             <source src="./videos/blackhole.webm" type="video/webm" />
           </video>
           <div
-            class="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
+            class="mp-lr flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
           >
             <div
               class="h-full w-full flex flex-col gap-5 justify-center m-auto text-start"
@@ -180,8 +181,7 @@
                 </h1>
               </div>
               <div
-                class="flex flex-col gap-6 mt-6 md:text-6xl text-4xl font-bold text-white max-w-[600px] w-auto h-auto"
-                style="opacity: 1; transform: none"
+                class="hero-text flex flex-col gap-6 mt-6 md:text-6xl text-4xl font-bold text-white max-w-[600px] w-auto h-auto"
               >
                 <span
                   >Providing<span
@@ -192,7 +192,7 @@
                 >
               </div>
               <p
-                class="md:text-lg text-gray-400 my-5 max-w-[600px]"
+                class="hero-dec md:text-lg text-gray-400 my-5 max-w-[600px]"
                 style="opacity: 1; transform: none"
               >
                 Hi there, I'm
@@ -204,7 +204,7 @@
                 and skills.
               </p>
               <div
-                class="flex flex-row gap-5 text-gray-200 text-[22px]"
+                class="hero-icons flex flex-row gap-5 text-gray-200 text-[22px]"
                 style="opacity: 1"
               >
                 <a
@@ -238,7 +238,7 @@
                 ></a>
               </div>
               <a
-                class="py-2 button-primary text-center text-white cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 rounded-lg max-w-[200px]"
+                class="hero-readmore-btn py-2 button-primary text-center text-white cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 rounded-lg max-w-[200px]"
                 href="#about-me"
                 style="opacity: 1; transform: none"
                 >Learn More!</a
@@ -263,7 +263,7 @@
         </div>
         <section
           id="skills"
-          class="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-80 py-20"
+          class="tp-b flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-80 py-20"
           style="transform: scale(0.9)"
         >
           <div class="w-full h-auto flex flex-col items-center justify-center">
@@ -593,7 +593,7 @@
           </div>
         </div>
         <div class="z-[20]">
-          <div class="p-20 mx-auto" id="projects">
+          <div class="mp-lr p-20 mx-auto" id="projects">
             <h1
               class="text-[40px] text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20"
             >
@@ -658,7 +658,7 @@
                           premium account generatorPremium Account Generator: Elevate user experience with a click-to-generate feature for 1-year or 1-month premium accounts. Blurred security for email and password. Developers enhance display, implement random email logic, and add a supplementary offer button.
                         </p>
                       </div>
-                      <a href="https://github.com/shoaib-fateh" target="_blank">
+                      <a href="https://github.com/shoaib-fateh/premium-account-generator" target="_blank">
                         <button
                           type="button"
                           class="bottom-3 h-[40px] w-[150px] button-primary text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 text-white cursor-pointer rounded-xl items-center"
@@ -727,7 +727,7 @@
                         A JavaScript program to calculate the weight of an object on different planets.
                         </p>
                       </div>
-                      <a href="https://github.com/shoaib-fateh/premium-account-generator" target="_blank">
+                      <a href="https://github.com/shoaib-fateh/calculate-a-weight-of-an-object-on-a-planet" target="_blank">
                         <button
                           type="button"
                           class="bottom-3 h-[40px] w-[150px] button-primary text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 text-white cursor-pointer rounded-xl items-center"
